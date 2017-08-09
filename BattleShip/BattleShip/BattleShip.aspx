@@ -1,14 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BattleShip.aspx.cs" Inherits="BattleShip.BattleShip" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="BattleShip.aspx.cs" Inherits="BattleShip.WebForm1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div>
             <table>
                 <tr>
                     <td><button>1,1</button></td>
@@ -40,6 +34,4 @@
                 </tr>
             </table>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
