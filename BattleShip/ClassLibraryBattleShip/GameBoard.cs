@@ -7,6 +7,7 @@ namespace ClassLibraryBattleShip
 {
     public class GameBoard
     {
-        public Tile[] Tiles { get; set; }
+        public Tile[,] Tiles { get; set; }
+
     }
 }

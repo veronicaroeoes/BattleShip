@@ -1,0 +1,5 @@
+C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\bin\Debug\ClassLibraryBattleShip.dll
+C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\bin\Debug\ClassLibraryBattleShip.pdb
+C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.csprojResolveAssemblyReference.cache
+C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.dll
+C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.pdb
