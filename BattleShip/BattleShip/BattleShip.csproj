@@ -76,6 +76,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +95,12 @@
     <Compile Include="BattleShip.aspx.designer.cs">
       <DependentUpon>BattleShip.aspx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryBattleShip\ClassLibraryBattleShip.csproj">
+      <Project>{3d1953d9-0bae-4269-89e1-8b63e13ff4c4}</Project>
+      <Name>ClassLibraryBattleShip</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

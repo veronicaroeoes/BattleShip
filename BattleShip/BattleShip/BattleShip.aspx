@@ -1,10 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="BattleShip.aspx.cs" Inherits="BattleShip.WebForm1" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
-        <table>
+    <div id="GameBoardDiv">
+        <table id="tableId">
             <tr>
                 <td>
                     <button>1,1</button></td>

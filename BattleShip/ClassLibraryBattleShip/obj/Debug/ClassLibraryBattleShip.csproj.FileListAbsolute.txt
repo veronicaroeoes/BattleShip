@@ -3,3 +3,8 @@ C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\bin\De
 C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.csprojResolveAssemblyReference.cache
 C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.dll
 C:\Academy\projects_new\Patrik\Projekt2\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.pdb
+C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\ClassLibraryBattleShip\bin\Debug\ClassLibraryBattleShip.dll
+C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\ClassLibraryBattleShip\bin\Debug\ClassLibraryBattleShip.pdb
+C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.csprojResolveAssemblyReference.cache
+C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.dll
+C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\ClassLibraryBattleShip\obj\Debug\ClassLibraryBattleShip.pdb

@@ -100,3 +100,5 @@ C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\BattleShip\bin\Microsoft.CodeDo
 C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\BattleShip\obj\Debug\BattleShip.csprojResolveAssemblyReference.cache
 C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\BattleShip\obj\Debug\BattleShip.dll
 C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\BattleShip\obj\Debug\BattleShip.pdb
+C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\BattleShip\bin\ClassLibraryBattleShip.dll
+C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\BattleShip\bin\ClassLibraryBattleShip.pdb
