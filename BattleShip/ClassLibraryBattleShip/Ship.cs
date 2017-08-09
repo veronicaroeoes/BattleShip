@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BattleShip
+namespace ClassLibraryBattleShip
 {
     public class Ship
     {
