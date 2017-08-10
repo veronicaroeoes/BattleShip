@@ -31,13 +31,13 @@ namespace BattleShip {
         protected global::System.Web.UI.WebControls.TextBox TextBoxPlayerName;
         
         /// <summary>
-        /// RequiredFieldValidatorPlayerName control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorPlayerName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// LabelRows control.
@@ -67,15 +67,6 @@ namespace BattleShip {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorRows;
         
         /// <summary>
-        /// RangeValidatorRow control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorRow;
-        
-        /// <summary>
         /// LabelColumns control.
         /// </summary>
         /// <remarks>
@@ -101,15 +92,6 @@ namespace BattleShip {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorColumns;
-        
-        /// <summary>
-        /// RangeValidatorColumn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidatorColumn;
         
         /// <summary>
         /// btnPlayGame control.
