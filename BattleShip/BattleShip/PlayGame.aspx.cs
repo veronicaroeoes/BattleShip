@@ -19,28 +19,34 @@ namespace BattleShip
             int columns = Convert.ToInt32(Request["columns"]);
             string playerName = Request["playerName"];
 
-            List<Tile> gameBoard = new List<Tile>();     
+            List<Tile> gameBoard = new List<Tile>();
+            Player player = new Player();
+
+            if (Session["Player"] != null)
+            {
+                player = (Player)Session["Player"];
+            }
+            else
+            {
+                player = new Player();
+                player.Name = playerName;
+                Session["Player"] = player;
+            }
 
             if (Session["gamePlan"] != null)
             {
                 gameBoard = (List<Tile>)Session["gamePlan"];
                 DrawGameBoard(gameBoard, rows, columns);
+                
             }
             else
             {
+                
                 gameBoard = CreateGameBoard(rows, columns);
                 Session["gamePlan"] = gameBoard;
                 DrawGameBoard(gameBoard, rows, columns);
             }
-            //if (!IsPostBack)
-            //{
-            //    gameBoard = CreateGameBoard(rows, columns);
-            //    DrawGameBoard(gameBoard, rows, columns);
-            //}
-            //else
-            //{
-            //    DrawGameBoard(gameBoard, rows, columns);
-            //}
+            
         }
 
         private void DrawGameBoard(List<Tile> gameBoard, int rows, int columns)
@@ -87,6 +93,10 @@ namespace BattleShip
                     {
                         currentTile.BackColor = System.Drawing.Color.Red;
                         Session["gamePlan"] = null;
+                        Player player = (Player)Session["Player"];
+                        player.Win = true;
+                        Session["Player"] = player;
+                        Server.Transfer($"EndGame.aspx?");
                     }
                     else
                     {

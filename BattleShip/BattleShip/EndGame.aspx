@@ -4,9 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-<%--Du har vunnit eller förlorat--%>
-<%--Knapp, vill du spela igen!?!!?!??!?!?!?!?!?! --%>
 
-
-
+    <asp:Label ID="LabelWinLoose" runat="server" Text=""></asp:Label>
+    <br />
+    <asp:Button ID="ButtonYes" runat="server" Text="Yes" OnClick="ButtonYes_Click" />
+    <asp:Button ID="ButtonNo" runat="server" Text="No" />
 </asp:Content>

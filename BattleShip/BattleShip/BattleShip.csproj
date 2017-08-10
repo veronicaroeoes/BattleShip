@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EndGame.aspx" />
     <Content Include="packages.config" />
     <Content Include="Main.Master" />
     <Content Include="BattleShip.aspx" />
@@ -81,6 +82,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EndGame.aspx.cs">
+      <DependentUpon>EndGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EndGame.aspx.designer.cs">
+      <DependentUpon>EndGame.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
