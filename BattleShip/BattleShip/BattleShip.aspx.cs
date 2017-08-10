@@ -32,10 +32,6 @@ namespace BattleShip
                 {
                 }
             }
-            //else
-            //{
-            //    Server.Transfer("BattleShip.aspx");
-            //}
         }
     }
 }
