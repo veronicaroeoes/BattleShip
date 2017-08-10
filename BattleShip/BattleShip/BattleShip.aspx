@@ -6,5 +6,11 @@
     <asp:Label ID="LabelPlayerName" runat="server" Text="Player name: "></asp:Label>
     <asp:TextBox ID="TextBoxPlayerName" runat="server"></asp:TextBox>
     <br />
+    <asp:Label ID="LabelRows" runat="server" Text="Rows: "></asp:Label>
+    <asp:TextBox ID="TextBoxRows" runat="server"></asp:TextBox>
+    <br />
+    <asp:Label ID="LabelColumns" runat="server" Text="Columns: "></asp:Label>
+    <asp:TextBox ID="TextBoxColumns" runat="server"></asp:TextBox>
+    <br />
     <asp:Button ID="btnPlayGame" runat="server" OnClick="btnPlayGame_Click" Text="Go!" />
 </asp:Content>

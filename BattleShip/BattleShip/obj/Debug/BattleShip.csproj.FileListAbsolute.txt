@@ -104,3 +104,5 @@ C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\BattleShip\bin\ClassLibraryBatt
 C:\Projects\1 Vecka7 Grupparbete Spel\BattleShip\BattleShip\bin\ClassLibraryBattleShip.pdb
 C:\Academy\projects_new\Patrik\Projekt2\BattleShip\BattleShip\bin\ClassLibraryBattleShip.dll
 C:\Academy\projects_new\Patrik\Projekt2\BattleShip\BattleShip\bin\ClassLibraryBattleShip.pdb
+C:\Users\Administrator\Desktop\BattleShip\BattleShip\BattleShip\bin\ClassLibraryBattleShip.dll
+C:\Users\Administrator\Desktop\BattleShip\BattleShip\BattleShip\bin\ClassLibraryBattleShip.pdb

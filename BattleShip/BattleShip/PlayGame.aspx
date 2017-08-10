@@ -2,21 +2,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div id="GameBoardDiv">
+    <asp:Panel ID="WarPanel" runat="server"></asp:Panel>
+    <asp:Panel ID="InfoPanel" runat="server"></asp:Panel>
+<%--        <div id="GameBoardDiv">
         <table id="tableId">
-            <tr>
+            <tr class="row1">
                 <td>
-                    <button>1,1</button></td>
+                    <asp:Button ID="Button1" runat="server" Text="1,1" />
+                </td>
                 <td>
-                    <button>1,2</button></td>
+                    <asp:Button ID="Button2" runat="server" Text="1,2" />
+                </td>
                 <td>
-                    <button>1,3</button></td>
+
+                </td>
                 <td>
                     <button>1,4</button></td>
                 <td>
                     <button>1,5</button></td>
             </tr>
-            <tr>
+            <tr class="row2">
                 <td>
                     <button>2,1</button></td>
                 <td>
@@ -28,7 +33,7 @@
                 <td>
                     <button>2,5</button></td>
             </tr>
-            <tr>
+            <tr class="row3">
                 <td>
                     <button>3,1</button></td>
                 <td>
@@ -40,7 +45,7 @@
                 <td>
                     <button>3,5</button></td>
             </tr>
-            <tr>
+            <tr class="row4">
                 <td>
                     <button>4,1</button></td>
                 <td>
@@ -53,5 +58,5 @@
                     <button>4,5</button></td>
             </tr>
         </table>
-    </div>
+    </div>--%>
 </asp:Content>

@@ -31,6 +31,42 @@ namespace BattleShip {
         protected global::System.Web.UI.WebControls.TextBox TextBoxPlayerName;
         
         /// <summary>
+        /// LabelRows control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRows;
+        
+        /// <summary>
+        /// TextBoxRows control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxRows;
+        
+        /// <summary>
+        /// LabelColumns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelColumns;
+        
+        /// <summary>
+        /// TextBoxColumns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxColumns;
+        
+        /// <summary>
         /// btnPlayGame control.
         /// </summary>
         /// <remarks>
