@@ -19,23 +19,22 @@ namespace BattleShip
         {
             if (IsValid)
             {
-                try
-                {
-                    int rows = Convert.ToInt32(TextBoxRows.Text);
-                    int columns = Convert.ToInt32(TextBoxColumns.Text);
-                    string playerName = TextBoxPlayerName.Text;
+                int rows = Convert.ToInt32(TextBoxRows.Text);
+                int columns = Convert.ToInt32(TextBoxColumns.Text);
+                string playerName = TextBoxPlayerName.Text;
 
+<<<<<<< HEAD
                     Server.Transfer($"PlayGame.aspx?rows={rows}&columns={columns}&playerName={playerName}");
 
                 }
                 catch
                 {
                 }
+=======
+                Server.Transfer($"PlayGame.aspx?rows={rows}&columns={columns}&playerName={playerName}");
+
+>>>>>>> 674b2a51bca570d91589c97eb1725247bab68a21
             }
-            //else
-            //{
-            //    Server.Transfer("BattleShip.aspx");
-            //}
         }
     }
 }
