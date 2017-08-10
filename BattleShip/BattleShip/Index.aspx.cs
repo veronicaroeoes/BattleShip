@@ -39,7 +39,10 @@ namespace BattleShip
                     throw;
                 }
             }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 669cae453c57b88e396e64873de3ea2151723123
         }
     }
 }
