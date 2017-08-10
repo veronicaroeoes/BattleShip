@@ -12,22 +12,28 @@ namespace BattleShip
     {        
         protected void Page_Load(object sender, EventArgs e)
         {
+            // StartGame(); 
+        }
+
+        private void StartGame(string playerName, string gameBoardSize)
+        {
+            // Player name
+            // Size of game board, hårdkodadt 4x5 tiles
+
 
         }
 
-        private void CreateGameBoard()
+        protected void btnPlayGame_Click(object sender, EventArgs e)
         {
+            
+            if (Request["action"] != null)
+            {
+                string gameBoardSize = "4,5";
+                string playerName = TextBoxPlayerName.Text;
 
-        }
-
-        private void CreateShip()
-        {
-
-        }
-
-        private void TryHit()
-        {
-
+                
+                StartGame(playerName, gameBoardSize);
+            }
         }
     }
 }

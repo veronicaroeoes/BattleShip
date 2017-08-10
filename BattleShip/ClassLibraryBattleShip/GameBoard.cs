@@ -7,6 +7,9 @@ namespace ClassLibraryBattleShip
 {
     public class GameBoard
     {
+        // prop för storlek?? 
+        // public int size { get; set; }
+
         public Tile[,] Tiles { get; set; }
 
     }
