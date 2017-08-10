@@ -12,7 +12,13 @@ namespace BattleShip
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Player player = new Player();
+            if (Session["Player"] != null)
+            {
+                player = (Player)Session["Player"];
+                TextBoxPlayerName.Text = $"{player.Name}";
+                Session["Player"] = null;
+            }
         }
 
         protected void btnPlayGame_Click(object sender, EventArgs e)
@@ -28,14 +34,12 @@ namespace BattleShip
                     Server.Transfer($"PlayGame.aspx?rows={rows}&columns={columns}&playerName={playerName}");
 
                 }
-                catch
+                catch(Exception)
                 {
+                    throw;
                 }
             }
-            //else
-            //{
-            //    Server.Transfer("BattleShip.aspx");
-            //}
+
         }
     }
 }

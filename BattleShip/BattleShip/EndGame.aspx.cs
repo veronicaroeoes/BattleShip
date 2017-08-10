@@ -29,7 +29,9 @@ namespace BattleShip
 
         protected void ButtonYes_Click(object sender, EventArgs e)
         {
-            Server.Transfer("BattleShip.aspx");
+
+            Server.Transfer("Index.aspx");
+
         }
     }
 }
