@@ -5,6 +5,8 @@
 <head runat="server">
     <title></title>
     <link href="StyleSheet1.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Walter+Turncoat" rel="stylesheet">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

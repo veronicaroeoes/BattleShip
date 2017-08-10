@@ -18,18 +18,18 @@ namespace BattleShip
                 player = (Player)Session["Player"];
                 if (player.Win)
                 {
-                    LabelWinLoose.Text = $"Grattis {player.Name}! Du har vunnit!";
+                    LabelWinLoose.Text = $"Congratulations {player.Name}! You won!";
                 }
                 else
                 {
-                    LabelWinLoose.Text = $"Tyvärr {player.Name}! Du har förlorat!";
+                    LabelWinLoose.Text = $"Sorry {player.Name}! You lost!";
                 }
             } 
         }
 
         protected void ButtonYes_Click(object sender, EventArgs e)
         {
-            Server.Transfer("BattleShip.aspx");
+            Server.Transfer("Index.aspx");
         }
     }
 }
