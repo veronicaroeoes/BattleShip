@@ -17,11 +17,29 @@ namespace BattleShip
 
         protected void btnPlayGame_Click(object sender, EventArgs e)
         {
-            int rows = Convert.ToInt32(TextBoxRows.Text);
-            int columns = Convert.ToInt32(TextBoxColumns.Text);
-            string playerName = TextBoxPlayerName.Text;
+            if (IsValid)
+            {
+                try
+                {
+                    int rows = Convert.ToInt32(TextBoxRows.Text);
+                    int columns = Convert.ToInt32(TextBoxColumns.Text);
+                    string playerName = TextBoxPlayerName.Text;
 
-            Server.Transfer($"PlayGame.aspx?rows={rows}&columns={columns}&playerName={playerName}");
+                    Player player = new Player();
+                    player.Name = TextBoxPlayerName.Text;
+
+
+                    Server.Transfer($"PlayGame.aspx?rows={rows}&columns={columns}&playerName={playerName}");
+
+                }
+                catch
+                {
+                }
+            }
+            //else
+            //{
+            //    Server.Transfer("BattleShip.aspx");
+            //}
         }
     }
 }

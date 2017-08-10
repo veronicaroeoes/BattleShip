@@ -31,6 +31,15 @@ namespace BattleShip {
         protected global::System.Web.UI.WebControls.TextBox TextBoxPlayerName;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// LabelRows control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace BattleShip {
         protected global::System.Web.UI.WebControls.TextBox TextBoxRows;
         
         /// <summary>
+        /// RequiredFieldValidatorRows control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorRows;
+        
+        /// <summary>
         /// LabelColumns control.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,15 @@ namespace BattleShip {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxColumns;
+        
+        /// <summary>
+        /// RequiredFieldValidatorColumns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorColumns;
         
         /// <summary>
         /// btnPlayGame control.
