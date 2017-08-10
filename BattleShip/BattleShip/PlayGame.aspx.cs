@@ -19,9 +19,7 @@ namespace BattleShip
             int columns = Convert.ToInt32(Request["columns"]);
             string playerName = Request["playerName"];
 
-            List<Tile> gameBoard = new List<Tile>();
-
-            
+            List<Tile> gameBoard = new List<Tile>();     
 
             if (Session["gamePlan"] != null)
             {
@@ -31,6 +29,7 @@ namespace BattleShip
             else
             {
                 gameBoard = CreateGameBoard(rows, columns);
+                Session["gamePlan"] = gameBoard;
                 DrawGameBoard(gameBoard, rows, columns);
             }
             //if (!IsPostBack)
@@ -68,7 +67,6 @@ namespace BattleShip
                 for (int c = 1; c <= columns; c++)
                 {
                     Tile tile = new Tile(r, c);
-
                     tile.Click += TryHit;
                     tiles.Add(tile);
                 }
@@ -88,6 +86,7 @@ namespace BattleShip
                     if (currentTile.IsShip)
                     {
                         currentTile.BackColor = System.Drawing.Color.Red;
+                        Session["gamePlan"] = null;
                     }
                     else
                     {
@@ -101,7 +100,5 @@ namespace BattleShip
         {
 
         }
-
-
     }
 }
