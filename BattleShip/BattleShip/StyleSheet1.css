@@ -1,13 +1,17 @@
 ﻿body {
     /*border: 2px solid black;*/
-    width: 60%;
+    background-image: url(Assets/Shipwreck.jpg);
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Coming Soon'; 
 }
 
 h1 {
-    font-family: 'Caviar Dreams';
+    font-size: 50px;
+    color: white;
     text-align: center;
+    font-family: 'Walter Turncoat';
 }
 
 nav {
@@ -25,17 +29,44 @@ nav {
 }
 
     .gameInfo table {
+        font-size: 30px;
+        color: white;
         width: auto;
         margin-left: auto;
         margin-right: auto;
-        font-family: 'Caviar Dreams';
     }
 
+        .gameInfo table td {
+            width: auto;
+            /*border: 2px solid green;*/
+            /*padding: 30px 30px 30px 30px;*/
+            margin: 30px 30px 30px 30px;
+        }
+        
+        .gameInfo .TextBoxes {
+            width: auto;
+            font-size: 20px;
+            color: darkblue;
+        }
+
+        .gameInfo .Validators {
+            font-size: 15px;
+        }
+
     .gameInfo .btnPlayGame {
-        width: 20%;
-        margin-left: 40%;
-        margin-right: 40%;
-        background-color: coral;
-        font-family: Cinzel;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        background-color: midnightblue;
+        color: white;
         font-size: 20px;
+        padding: 5px 10px 5px 10px;
+        font-family: 'Walter Turncoat';
+    }
+
+.EndGamePage {
+    color: white;
+}
+
+    .EndGamePage h2 {
     }
