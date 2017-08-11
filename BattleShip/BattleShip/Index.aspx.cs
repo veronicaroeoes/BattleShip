@@ -29,24 +29,8 @@ namespace BattleShip
                 int columns = Convert.ToInt32(TextBoxColumns.Text);
                 string playerName = TextBoxPlayerName.Text;
 
-<<<<<<< HEAD
                 Server.Transfer($"PlayGame.aspx?rows={rows}&columns={columns}&playerName={playerName}");
             }
-            
-=======
-                    Server.Transfer($"PlayGame.aspx?rows={rows}&columns={columns}&playerName={playerName}");
-
-                }
-                catch(Exception)
-                {
-                    throw;
-                }
-            }
-<<<<<<< HEAD
-
-=======
->>>>>>> 669cae453c57b88e396e64873de3ea2151723123
->>>>>>> d1c816905e98341df36b93e37b33c036eab559e2
         }
     }
 }

@@ -29,13 +29,10 @@ namespace BattleShip
 
         protected void ButtonYes_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             Server.Transfer("Index.aspx");
-=======
 
             Server.Transfer("Index.aspx");
 
->>>>>>> d1c816905e98341df36b93e37b33c036eab559e2
         }
     }
 }
