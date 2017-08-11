@@ -12,6 +12,7 @@ namespace ClassLibraryBattleShip
         public bool Win { get; set; }
         public GameBoard GameBoard { get; set; }
         public int Hits { get; set; }
+        public int Tries { get; set; }
 
 
 

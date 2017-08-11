@@ -81,67 +81,212 @@ namespace BattleShip
                 }
             }
 
-            tiles = PlaceShip(tiles, 3);
+            tiles = PlaceShip(tiles);
             return tiles;
         }
-        private List<Tile> PlaceShip(List<Tile> tiles, int boatCount)
+        //private List<Tile> PlaceShip(List<Tile> tiles, int boatCount)
+        //{
+
+        //    Player player = (Player)Session["Player"];
+        //    player.Hits = boatCount;
+        //    int placedBoatsCheck = 0;
+        //    while (placedBoatsCheck < 3)
+        //    {
+        //        int position = random.Next(0, tiles.Count);
+        //        if (tiles[position].IsShip == false)
+        //        {
+        //            tiles[position].IsShip = true;
+        //           // tiles[position].BackColor = System.Drawing.Color.Black;
+        //            placedBoatsCheck++;
+        //        }
+        //    }
+        //    Session["Player"] = player;
+        //    return tiles;
+        //}
+        private List<Tile> PlaceShip(List<Tile> tiles)
         {
-            //int size = random.Next(0, 2);
-            //int position = random.Next(0, tiles.Count);
-
-            //while (true)
-            //{
-            //    bool isVågrät = random.Next(0, 2) == 1;
-
-            //    if (isVågrät)
-            //    {
-            //        while (true)
-            //        {
-            //            if ((position + 1) / Convert.ToInt32(Request["Columns"]) % 2 == 0 && tiles[position - 1].IsShip == false)
-            //            {
-            //                tiles[position].IsShip = true;
-            //                tiles[position - 1].IsShip = true;
-            //                break;
-            //            }
-            //            else if (position / Convert.ToInt32(Request["Columns"]) % 2 == 0 && tiles[position + 1].IsShip == false)
-            //            {
-            //                tiles[position].IsShip = true;
-            //                tiles[position + 1].IsShip = true;
-            //                break;
-            //            }
-            //            else
-            //            {
-            //                bool tmp = random.Next(0, 2) == 1;
-            //                int tmpInt;
-
-            //                if (tmp)
-            //                {
-            //                    tmpInt = 1;
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
-
             Player player = (Player)Session["Player"];
-            player.Hits = boatCount;
+            //player.Hits = boatCount;
             int placedBoatsCheck = 0;
+            
+
             while (placedBoatsCheck < 3)
             {
+                int size = random.Next(0, 2);
                 int position = random.Next(0, tiles.Count);
-                if (tiles[position].IsShip == false)
+
+                if (size == 0 || size == tiles.Count - 1 && tiles[position].IsShip == false)
                 {
                     tiles[position].IsShip = true;
                     tiles[position].BackColor = System.Drawing.Color.Black;
                     placedBoatsCheck++;
                 }
+
+                else if (size == 1 && tiles[position].IsShip == false)
+                {
+                    while (true)
+                    {
+                        bool isVågrät = random.Next(0, 2) == 1;
+
+                        if (isVågrät)
+                        {
+                            while (true)
+                            {
+                                if (position == 0 && tiles[position + 1].IsShip == false)
+                                {
+                                    tiles[position].IsShip = true;
+                                    tiles[position + 1].IsShip = true;
+                                    tiles[position].BackColor = System.Drawing.Color.Black;
+                                    tiles[position + 1].BackColor = System.Drawing.Color.Black;
+                                    placedBoatsCheck++;
+                                    break;
+                                }
+
+                                else if (position == tiles.Count - 1 && tiles[position - 1].IsShip == false)
+                                {
+                                    tiles[position].IsShip = true;
+                                    tiles[position - 1].IsShip = true;
+                                    tiles[position].BackColor = System.Drawing.Color.Black;
+                                    tiles[position - 1].BackColor = System.Drawing.Color.Black;
+                                    placedBoatsCheck++;
+                                    break;
+                                }
+
+                                else if ((position + 1) / Convert.ToInt32(Request["Columns"]) % 2 == 0 && tiles[position - 1].IsShip == false)
+                                {
+                                    tiles[position].IsShip = true;
+                                    tiles[position - 1].IsShip = true;
+                                    tiles[position].BackColor = System.Drawing.Color.Black;
+                                    tiles[position - 1].BackColor = System.Drawing.Color.Black;
+                                    placedBoatsCheck++;
+                                    break;
+                                }
+                                else if (position / Convert.ToInt32(Request["Columns"]) % 2 == 0 && tiles[position + 1].IsShip == false)
+                                {
+                                    tiles[position].IsShip = true;
+                                    tiles[position + 1].IsShip = true;
+                                    tiles[position].BackColor = System.Drawing.Color.Black;
+                                    tiles[position + 1].BackColor = System.Drawing.Color.Black;
+                                    placedBoatsCheck++;
+                                    break;
+                                }
+                                else
+                                {
+                                    int tmp = random.Next(0, 2);
+                                    //0 = +
+                                    //1 = -
+
+                                    if (tmp == 0 && tiles[position + 1].IsShip == false)
+                                    {
+                                        tiles[position].IsShip = true;
+                                        tiles[position + 1].IsShip = true;
+                                        tiles[position].BackColor = System.Drawing.Color.Black;
+                                        tiles[position + 1].BackColor = System.Drawing.Color.Black;
+                                        placedBoatsCheck++;
+                                        break;
+                                    }
+
+                                    else if (tmp == 1 && tiles[position - 1].IsShip == false)
+                                    {
+                                        tiles[position].IsShip = true;
+                                        tiles[position - 1].IsShip = true;
+                                        tiles[position].BackColor = System.Drawing.Color.Black;
+                                        tiles[position - 1].BackColor = System.Drawing.Color.Black;
+                                        placedBoatsCheck++;
+                                        break;
+                                    }
+                                }
+                            }
+                            break;
+                        }
+
+                        else if (!isVågrät)
+                        {
+                            while (true)
+                            {
+                                if (position == 0 && tiles[position + Convert.ToInt32(Request["Columns"])].IsShip == false)
+                                {
+                                    tiles[position].IsShip = true;
+                                    tiles[position + Convert.ToInt32(Request["Columns"])].IsShip = true;
+                                    tiles[position].BackColor = System.Drawing.Color.Black;
+                                    tiles[position + Convert.ToInt32(Request["Columns"])].BackColor = System.Drawing.Color.Black;
+                                    placedBoatsCheck++;
+                                    break;
+                                }
+
+                                else if (position == tiles.Count - 1 && tiles[position - Convert.ToInt32(Request["Columns"])].IsShip == false)
+                                {
+                                    tiles[position].IsShip = true;
+                                    tiles[position - Convert.ToInt32(Request["Columns"])].IsShip = true;
+                                    tiles[position].BackColor = System.Drawing.Color.Black;
+                                    tiles[position - Convert.ToInt32(Request["Columns"])].BackColor = System.Drawing.Color.Black;
+                                    placedBoatsCheck++;
+                                    break;
+                                }
+
+                                else if (position > 0 && position < Convert.ToInt32(Request["Columns"]) && tiles[position + Convert.ToInt32(Request["Columns"])].IsShip == false)
+                                {
+                                    tiles[position].IsShip = true;
+                                    tiles[position + Convert.ToInt32(Request["Columns"])].IsShip = true;
+                                    tiles[position].BackColor = System.Drawing.Color.Black;
+                                    tiles[position + Convert.ToInt32(Request["Columns"])].BackColor = System.Drawing.Color.Black;
+                                    placedBoatsCheck++;
+                                    break;
+                                }
+
+                                else if (position < tiles.Count - 1 && position >= tiles.Count - Convert.ToInt32(Request["Columns"]) && tiles[position - Convert.ToInt32(Request["Columns"])].IsShip == false)
+                                {
+                                    tiles[position].IsShip = true;
+                                    tiles[position - Convert.ToInt32(Request["Columns"])].IsShip = true;
+                                    tiles[position].BackColor = System.Drawing.Color.Black;
+                                    tiles[position - Convert.ToInt32(Request["Columns"])].BackColor = System.Drawing.Color.Black;
+                                    placedBoatsCheck++;
+                                    break;
+                                }
+                                else
+                                {
+                                    int tmp = random.Next(0, 2);
+                                    //0 = +
+                                    //1 = -
+
+                                    if (tmp == 0 && tiles[position + Convert.ToInt32(Request["Columns"])].IsShip == false)
+                                    {
+                                        tiles[position].IsShip = true;
+                                        tiles[position + Convert.ToInt32(Request["Columns"])].IsShip = true;
+                                        tiles[position].BackColor = System.Drawing.Color.Black;
+                                        tiles[position + Convert.ToInt32(Request["Columns"])].BackColor = System.Drawing.Color.Black;
+                                        placedBoatsCheck++;
+                                        break;
+                                    }
+                                    else if (tmp == 1 && tiles[position - Convert.ToInt32(Request["Columns"])].IsShip == false)
+                                    {
+                                        tiles[position].IsShip = true;
+                                        tiles[position - Convert.ToInt32(Request["Columns"])].IsShip = true;
+                                        tiles[position].BackColor = System.Drawing.Color.Black;
+                                        tiles[position - Convert.ToInt32(Request["Columns"])].BackColor = System.Drawing.Color.Black;
+                                        placedBoatsCheck++;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        break;
+                    }
+                }
             }
+            List<Tile> tmpList = tiles.FindAll(t => t.IsShip);
+            player.Hits = tmpList.Count;
             Session["Player"] = player;
             return tiles;
         }
 
+
         private void TryHit(object sender, EventArgs e)
         {
+
+            Player player = (Player)Session["Player"];
+            List<Tile> tiles = (List<Tile>)Session["gamePlan"];
+            player.Tries++;
 
             if (sender is Tile)
             {
@@ -151,30 +296,22 @@ namespace BattleShip
                     if (currentTile.IsShip)
                     {
                         currentTile.BackColor = System.Drawing.Color.Red;
-                        Player player = (Player)Session["Player"];
-                        player.Hits--;
-
-                        if (player.Hits == 0)
+                        
+                        if (--player.Hits == 0)
                         {
-                            player.Win = true;
-                            Session["gamePlan"] = null;
-                        }
+                            LabelWinLoose.Text = $"Congratulations {player.Name}! You won!";
 
-                        Session["Player"] = player;
-                        if (player.Win)
-                        {
-                            player = (Player)Session["Player"];
-                            if (player.Win)
-                            {
-                                LabelWinLoose.Text = $"Congratulations {player.Name}! You won!";
-                            }
-                            else
-                            {
-                                LabelWinLoose.Text = $"Sorry {player.Name}! You lost!";
-                            }
                             WarPanel.Enabled = false;
                             EndgamePanel.Visible = true;
                         }
+                        
+                    }
+                    else if (player.Tries >= (tiles.Count / 3) * 2)
+                    {
+                        LabelWinLoose.Text = $"Sorry {player.Name}! You lost!";
+
+                        WarPanel.Enabled = false;
+                        EndgamePanel.Visible = true;
                     }
                     else
                     {
