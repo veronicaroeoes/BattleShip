@@ -17,6 +17,7 @@ namespace ClassLibraryBattleShip
             X = x;
             Y = y;
             IsShip = false;
+            this.BackColor = System.Drawing.Color.Gray;
         }
 
     }
