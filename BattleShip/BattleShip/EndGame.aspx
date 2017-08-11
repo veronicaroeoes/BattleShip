@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div class="EndGamePage">
-<h2><asp:Label ID="LabelWinLoose" runat="server" Text=""></asp:Label></h2>
+<h2><asp:Label ID="LabelWinLoose" runat="server" Text="" CssClass="WinLoose"></asp:Label></h2>
     <br />
     <asp:Label ID="LabelPlayAgain" runat="server" Text="Do you want to play again?"></asp:Label>
     <br />

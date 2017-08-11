@@ -84,25 +84,7 @@ namespace BattleShip
             tiles = PlaceShip(tiles);
             return tiles;
         }
-        //private List<Tile> PlaceShip(List<Tile> tiles, int boatCount)
-        //{
-
-        //    Player player = (Player)Session["Player"];
-        //    player.Hits = boatCount;
-        //    int placedBoatsCheck = 0;
-        //    while (placedBoatsCheck < 3)
-        //    {
-        //        int position = random.Next(0, tiles.Count);
-        //        if (tiles[position].IsShip == false)
-        //        {
-        //            tiles[position].IsShip = true;
-        //           // tiles[position].BackColor = System.Drawing.Color.Black;
-        //            placedBoatsCheck++;
-        //        }
-        //    }
-        //    Session["Player"] = player;
-        //    return tiles;
-        //}
+        
         private List<Tile> PlaceShip(List<Tile> tiles)
         {
             Player player = (Player)Session["Player"];
@@ -126,20 +108,23 @@ namespace BattleShip
                 {
                     while (true)
                     {
-                        bool isVågrät = random.Next(0, 2) == 1;
+                        bool isVertical = random.Next(0, 2) == 1;
 
-                        if (isVågrät)
+                        if (isVertical)
                         {
                             while (true)
                             {
-                                if (position == 0 && tiles[position + 1].IsShip == false)
+                                if (position == 0)
                                 {
-                                    tiles[position].IsShip = true;
-                                    tiles[position + 1].IsShip = true;
-                                    tiles[position].BackColor = System.Drawing.Color.Black;
-                                    tiles[position + 1].BackColor = System.Drawing.Color.Black;
-                                    placedBoatsCheck++;
-                                    break;
+                                    if (tiles[position + 1].IsShip == false) 
+                                    {
+                                        tiles[position].IsShip = true;
+                                        tiles[position + 1].IsShip = true;
+                                        tiles[position].BackColor = System.Drawing.Color.Black;
+                                        tiles[position + 1].BackColor = System.Drawing.Color.Black;
+                                        placedBoatsCheck++;
+                                        break;
+                                    }
                                 }
 
                                 else if (position == tiles.Count - 1 && tiles[position - 1].IsShip == false)
@@ -200,7 +185,7 @@ namespace BattleShip
                             break;
                         }
 
-                        else if (!isVågrät)
+                        else if (!isVertical)
                         {
                             while (true)
                             {
@@ -274,8 +259,11 @@ namespace BattleShip
                     }
                 }
             }
-            List<Tile> tmpList = tiles.FindAll(t => t.IsShip);
-            player.Hits = tmpList.Count;
+             
+            int hits = tiles
+                .FindAll(t => t.IsShip)
+                .Count;
+            player.Hits = hits; 
             Session["Player"] = player;
             return tiles;
         }

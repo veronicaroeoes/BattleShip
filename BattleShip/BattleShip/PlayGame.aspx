@@ -9,9 +9,9 @@
     <asp:Panel ID="EndgamePanel" runat="server" Visible="false">
 
          <div class="EndGamePage">
-<h2><asp:Label ID="LabelWinLoose" runat="server" Text=""></asp:Label></h2>
+<h2><asp:Label ID="LabelWinLoose" runat="server" Text="" CssClass="labelWinLoose"></asp:Label></h2>
     <br />
-    <asp:Label ID="LabelPlayAgain" runat="server" Text="Do you want to play again?"></asp:Label>
+    <asp:Label ID="LabelPlayAgain" runat="server" CssClass="labelPlayAgain" Text="Do you want to play again?"></asp:Label>
     <br />
     <asp:Button ID="ButtonYes" runat="server" Text="Yes" OnClick="ButtonYes_Click" />
         </div>

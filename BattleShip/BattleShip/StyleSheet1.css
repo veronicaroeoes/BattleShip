@@ -14,11 +14,25 @@ h1 {
     font-family: 'Walter Turncoat';
 }
 
+h2 {
+    font-size: 40px; 
+}
+
 nav {
     /*border: 2px solid green;*/
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+}
+/*#LabelWinLoose{
+    color: blue;
+}*/
+.labelPlayAgain{
+    font-size: 20px;
+    color: black;
+}
+.labelWinLoose {
+    color: midnightblue;
 }
 
 .gameInfo {
@@ -67,6 +81,3 @@ nav {
 .EndGamePage {
     color: white;
 }
-
-    .EndGamePage h2 {
-    }
