@@ -86,58 +86,58 @@ namespace BattleShip
         }
         private List<Tile> PlaceShip(List<Tile> tiles, int boatCount)
         {
-            int size = random.Next(0, 2);
-            int position = random.Next(0, tiles.Count);
+            //int size = random.Next(0, 2);
+            //int position = random.Next(0, tiles.Count);
 
-            while (true)
-            {
-                bool isVågrät = random.Next(0, 2) == 1;
-
-                if (isVågrät)
-                {
-                    while (true)
-                    {
-                        if ((position + 1) / Convert.ToInt32(Request["Columns"]) % 2 == 0 && tiles[position - 1].IsShip == false)
-                        {
-                            tiles[position].IsShip = true;
-                            tiles[position - 1].IsShip = true;
-                            break;
-                        }
-                        else if (position / Convert.ToInt32(Request["Columns"]) % 2 == 0 && tiles[position + 1].IsShip == false)
-                        {
-                            tiles[position].IsShip = true;
-                            tiles[position + 1].IsShip = true;
-                            break;
-                        }
-                        else
-                        {
-                            bool tmp = random.Next(0, 2) == 1;
-                            int tmpInt;
-
-                            if (tmp)
-                            {
-                                tmpInt = 1;
-                            }
-                        }
-                    }
-                }
-            }
-
-            //Player player = (Player)Session["Player"];
-            //player.Hits = boatCount;
-            //int placeCheck = 0;
-            //while (placeCheck < 3)
+            //while (true)
             //{
-            //    int position = random.Next(0, tiles.Count);
-            //    if (tiles[position].IsShip == false)
+            //    bool isVågrät = random.Next(0, 2) == 1;
+
+            //    if (isVågrät)
             //    {
-            //        tiles[position].IsShip = true;
-            //        tiles[position].BackColor = System.Drawing.Color.Black;
-            //        placeCheck++;
+            //        while (true)
+            //        {
+            //            if ((position + 1) / Convert.ToInt32(Request["Columns"]) % 2 == 0 && tiles[position - 1].IsShip == false)
+            //            {
+            //                tiles[position].IsShip = true;
+            //                tiles[position - 1].IsShip = true;
+            //                break;
+            //            }
+            //            else if (position / Convert.ToInt32(Request["Columns"]) % 2 == 0 && tiles[position + 1].IsShip == false)
+            //            {
+            //                tiles[position].IsShip = true;
+            //                tiles[position + 1].IsShip = true;
+            //                break;
+            //            }
+            //            else
+            //            {
+            //                bool tmp = random.Next(0, 2) == 1;
+            //                int tmpInt;
+
+            //                if (tmp)
+            //                {
+            //                    tmpInt = 1;
+            //                }
+            //            }
+            //        }
             //    }
             //}
-            //Session["Player"] = player;
-            //return tiles;
+
+            Player player = (Player)Session["Player"];
+            player.Hits = boatCount;
+            int placedBoatsCheck = 0;
+            while (placedBoatsCheck < 3)
+            {
+                int position = random.Next(0, tiles.Count);
+                if (tiles[position].IsShip == false)
+                {
+                    tiles[position].IsShip = true;
+                    tiles[position].BackColor = System.Drawing.Color.Black;
+                    placedBoatsCheck++;
+                }
+            }
+            Session["Player"] = player;
+            return tiles;
         }
 
         private void TryHit(object sender, EventArgs e)

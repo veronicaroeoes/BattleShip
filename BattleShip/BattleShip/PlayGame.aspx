@@ -14,7 +14,6 @@
     <asp:Label ID="LabelPlayAgain" runat="server" Text="Do you want to play again?"></asp:Label>
     <br />
     <asp:Button ID="ButtonYes" runat="server" Text="Yes" OnClick="ButtonYes_Click" />
-    <asp:Button ID="ButtonNo" runat="server" Text="No" />
         </div>
     </asp:Panel>
     </center>
